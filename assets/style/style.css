@@ -1,0 +1,83 @@
+body {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+body .header {
+  display: flex;
+  flex-direction: column;
+  height: 115px;
+}
+body .header_logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 65%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+body .header_logo img {
+  width: 162px;
+  height: 30px;
+}
+body .header_localisation-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 5vw;
+       column-gap: 5vw;
+  background-color: #eaeaea;
+  z-index: 0;
+  font: 500 16px "Roboto";
+  color: #353535;
+}
+body .exploration {
+  text-align: center;
+  padding: 1vh 10vw 5vh;
+  background: #F7F7F7;
+}
+body .exploration h1 {
+  font: 700 24px "Roboto";
+}
+body .exploration p {
+  font: 300 18px "Roboto";
+}
+body .exploration button {
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  border: 0;
+  border-radius: 25px;
+  color: white;
+  font: 500 16px "Roboto";
+  padding: 1.5vh 5vw;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+body .exploration button:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+}
+body .explanation h1 {
+  font: 700 24px "Roboto";
+}
+body .explanation_bar {
+  display: inline-block;
+}
+body .explanation_bar p, body .explanation_bar span {
+  font: 500 16px "Roboto";
+}
+body .explanation_bar span {
+  color: white;
+  background: #9356DC;
+  border-radius: 50%;
+  padding: 0.2vh 1.5vw;
+}
+body .explanation_bar i {
+  color: #9356DC;
+}
+body .card {
+  max-width: 100%;
+}
+body .card > img {
+  max-width: 100%;
+}

@@ -1,3 +1,111 @@
-body {
-    
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
+
+$primary-font: 'Roboto';
+$title-font: 'Shrikhand';
+$bold-font: 700;
+$normal-font: 500;
+$light-font: 300;
+
+body {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  
+    .header {
+      display: flex;
+      flex-direction: column;
+      height: 115px;
+  
+      &_logo {
+        @include flex-row-center;
+        height: 65%;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+        z-index: 1;
+  
+        & img {
+          width: 162px;
+          height: 30px;
+        }
+      }
+  
+      &_localisation-bar {
+        @include flex-row-center;
+        column-gap: 5vw;
+        background-color: #eaeaea;
+        z-index: 0;
+        font: 500 16px $primary-font;
+        color: #353535;
+      }
+    }
+  
+    .exploration {
+
+        text-align: center;
+        padding: 1vh 10vw 5vh;
+        background: #F7F7F7;
+
+        & h1 {
+            font: $bold-font 24px $primary-font;
+        }
+
+        & p {
+            font: $light-font 18px $primary-font;
+        }
+  
+        & button {
+            background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+            border: 0;
+            border-radius: 25px;
+            color: white;
+            font: $normal-font 16px $primary-font;
+            padding: 1.5vh 5vw;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        & button:hover {
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+        }
+    }
+
+    .explanation {
+
+        & h1 {
+            font: $bold-font 24px $primary-font;
+        }
+
+        &_bar {
+
+            & p, span{
+                font: $normal-font 16px $primary-font;
+            }
+
+            display: inline-block;
+
+            & span {
+                color: white;
+                background: #9356DC;
+                border-radius: 50%;
+                padding: 0.2vh 1.5vw;
+            }
+
+            & i {
+                color: #9356DC;
+            }
+        }
+    }
+  
+    .card {
+      max-width: 100%;
+  
+      & > img {
+        max-width: 100%;
+      }
+    }
+  }
+  
