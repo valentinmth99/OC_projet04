@@ -1,14 +1,14 @@
-body {
+html, body {
   max-width: 100%;
   padding: 0;
   margin: 0;
 }
-body .header {
+html .header, body .header {
   display: flex;
   flex-direction: column;
   height: 115px;
 }
-body .header_logo {
+html .header_logo, body .header_logo {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -17,11 +17,11 @@ body .header_logo {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   z-index: 1;
 }
-body .header_logo img {
+html .header_logo img, body .header_logo img {
   width: 162px;
   height: 30px;
 }
-body .header_localisation-bar {
+html .header_localisation-bar, body .header_localisation-bar {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -33,18 +33,18 @@ body .header_localisation-bar {
   font: 500 16px "Roboto";
   color: #353535;
 }
-body .exploration {
+html .exploration, body .exploration {
   text-align: center;
   padding: 1vh 10vw 5vh;
   background: #F7F7F7;
 }
-body .exploration h1 {
+html .exploration h1, body .exploration h1 {
   font: 700 24px "Roboto";
 }
-body .exploration p {
+html .exploration p, body .exploration p {
   font: 300 18px "Roboto";
 }
-body .exploration button {
+html .exploration button, body .exploration button {
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   border: 0;
   border-radius: 25px;
@@ -53,31 +53,63 @@ body .exploration button {
   padding: 1.5vh 5vw;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
-body .exploration button:hover {
+html .exploration button:hover, body .exploration button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }
-body .explanation h1 {
+html .explanation h1, body .explanation h1 {
   font: 700 24px "Roboto";
 }
-body .explanation_bar {
+html .explanation_bar, body .explanation_bar {
   display: inline-block;
 }
-body .explanation_bar p, body .explanation_bar span {
+html .explanation_bar p, html .explanation_bar span, body .explanation_bar p, body .explanation_bar span {
   font: 500 16px "Roboto";
 }
-body .explanation_bar span {
+html .explanation_bar span, body .explanation_bar span {
   color: white;
   background: #9356DC;
   border-radius: 50%;
   padding: 0.2vh 1.5vw;
 }
-body .explanation_bar i {
+html .explanation_bar i, body .explanation_bar i {
   color: #9356DC;
 }
-body .card {
-  max-width: 100%;
+html .restaurants, body .restaurants {
+  display: flex;
+  flex-direction: column;
+  padding: 0 4vw;
 }
-body .card > img {
-  max-width: 100%;
+html .restaurants h1, body .restaurants h1 {
+  font: 700 24px "Roboto";
+}
+html .restaurants .card, body .restaurants .card {
+  width: 100%;
+  height: 251px;
+}
+html .restaurants .card > img, body .restaurants .card > img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 69%;
+  border-radius: 15px 15px 0 0;
+}
+html .restaurants .card_content, body .restaurants .card_content {
+  height: 31%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font: 700 18px "Roboto";
+}
+html .restaurants .card_text, body .restaurants .card_text {
+  font: 300 17px "Roboto";
+}
+html .footer, body .footer {
+  background: #353535;
+  color: white;
+  margin: 0;
+}
+html .footer ul, body .footer ul {
+  list-style: none;
 }
