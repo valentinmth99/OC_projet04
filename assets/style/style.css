@@ -56,12 +56,32 @@ html .exploration button, body .exploration button {
 html .exploration button:hover, body .exploration button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  transition: 3s;
+}
+html .explanation, body .explanation {
+  display: flex;
+  flex-direction: column;
+  padding: 2vh 4vw 5vh;
 }
 html .explanation h1, body .explanation h1 {
   font: 700 24px "Roboto";
 }
+html .explanation_container, body .explanation_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 3vh;
+}
 html .explanation_bar, body .explanation_bar {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 4.5vw;
+       column-gap: 4.5vw;
+  background: #F7F7F7;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  width: 90%;
+  padding: 1vh 0;
 }
 html .explanation_bar p, html .explanation_bar span, body .explanation_bar p, body .explanation_bar span {
   font: 500 16px "Roboto";
@@ -71,14 +91,19 @@ html .explanation_bar span, body .explanation_bar span {
   background: #9356DC;
   border-radius: 50%;
   padding: 0.2vh 1.5vw;
+  position: relative;
+  right: 8px;
+  font-size: 15px;
 }
-html .explanation_bar i, body .explanation_bar i {
+html .explanation_bar:hover i, body .explanation_bar:hover i {
   color: #9356DC;
 }
 html .restaurants, body .restaurants {
   display: flex;
   flex-direction: column;
+  row-gap: 2vh;
   padding: 0 4vw;
+  background: #F7F7F7;
 }
 html .restaurants h1, body .restaurants h1 {
   font: 700 24px "Roboto";
@@ -86,6 +111,14 @@ html .restaurants h1, body .restaurants h1 {
 html .restaurants .card, body .restaurants .card {
   width: 100%;
   height: 251px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+html .restaurants .card h2, body .restaurants .card h2 {
+  font: 700 18px "Roboto";
+}
+html .restaurants .card p, body .restaurants .card p {
+  font: 300 17px "Roboto";
 }
 html .restaurants .card > img, body .restaurants .card > img {
   width: 100%;
@@ -100,10 +133,7 @@ html .restaurants .card_content, body .restaurants .card_content {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font: 700 18px "Roboto";
-}
-html .restaurants .card_text, body .restaurants .card_text {
-  font: 300 17px "Roboto";
+  padding: 0 4vw;
 }
 html .footer, body .footer {
   background: #353535;
