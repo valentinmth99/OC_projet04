@@ -1,0 +1,2 @@
+1. INDEX SECTION explanation à rendre RESPONSIVE
+2. Rendre éléments CLIQUABLES sur INDEX

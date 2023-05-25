@@ -1,0 +1,215 @@
+// CONSTRUIRE COCHE VERTE MENU ITEM 
+@import '../scss/utils/mixins';
+@import '../scss/utils/animations';
+
+$primary-font: 'Roboto';
+$title-font: 'Shrikhand';
+$bold-font: 700;
+$normal-font: 500;
+$light-font: 300;
+
+body {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    .body_container {
+        display: flex;
+        flex-direction: column;
+
+        header{
+        max-width: 100%;
+        z-index: 0;
+        .header_logo {
+            display: flex;
+            justify-content: center;
+            
+            & img {
+            width: 162px;
+            height: 30px;
+            padding: 2vh 0;
+            }
+        }
+    
+        .header_restaurant img{
+            width: 100%;
+
+            @include desktop-only {
+                height: 375px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    main {
+        z-index: 1;
+
+        .menu_restaurant {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background: #F7F7F7;
+            border-radius: 20px 20px 0 0;
+            margin-top: -6vh;
+            padding: 0 3vw;
+
+            @include desktop-only {
+                margin: -6vh 190px 0 190px;
+            }
+
+            h1 {
+                font: normal 28px $title-font;
+            }
+
+            h2 {
+                font: $light-font 16px $primary-font;
+                border-bottom: 3px solid #99E2D0;
+                width: 11%;
+                padding-bottom: 1vh;
+            }
+
+            h3, span {
+                font: $normal-font 18px $primary-font;
+            }
+
+            p {
+                font: $light-font 15px $primary-font;
+            }
+
+            .menu_item {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: last baseline;
+                background: white;
+                box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+                border-radius: 15.0431px;
+                padding: 0 15px;
+                margin-bottom: 3vh;
+                height: 90px;
+                position: relative;
+                animation: menu-apparition 2s ease-out;
+                & span {
+                    transition: transform 0.5s ease-in-out;
+                }
+
+                .menu_icon {
+                    background-color: #99E2D0;
+                    width: 60px;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 0px 15px 15px 0px;
+                    clip-path: inset(0 0 0 100%);
+                    transition: clip-path 0.5s ease-in-out;
+                    position: absolute;
+                    right: 0;
+
+                    & i {
+                        background-color: white;
+                        border-radius: 50%;
+                        padding: 3px 4.4px;
+                        transition: transform 0.6s ease-out;
+                        transition-delay: 0.1s;
+                    }
+                }
+            }
+
+            .menu_section:nth-of-type(1) { 
+                animation: menu-apparition1 1.5s ease-out;
+            };
+            .menu_section:nth-of-type(2) {
+                animation: menu-apparition2 3s ease-out;
+             };
+            .menu_section:nth-of-type(3) { 
+                animation: menu-apparition3 4.5s ease-out;
+            };
+
+            .menu_item:hover, .menu_item:active {
+
+                & span {
+                    transform: translateX(-60px);
+                }
+                .menu_icon {
+                    clip-path: inset(0);
+                    & i {
+                        transform: rotate(360deg);
+                    }
+                }
+
+            }
+        }
+
+        & button {
+            background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+            border: 0;
+            border-radius: 25px;
+            color: white;
+            font: $normal-font 16px $primary-font;
+            padding: 16px 49px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+            width: fit-content;
+            align-self: center;
+            margin: 2vh 0 5vh 0;
+        }
+
+        & button:hover {
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+        }
+    }
+
+    .footer {
+        background: #353535;
+        color: white;
+        margin: 0;
+        padding: 2vh 10vw 0;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        & img {
+            width: 99px;
+            height: 18px;
+        }
+        
+        & .navbar_list {
+            @include navbar-link();
+            font: $normal-font 16px $primary-font;
+
+            &-lighter {
+                @include navbar-link();
+                font: $light-font 16px $primary-font;
+            }
+            i {
+                padding-right: 15px;
+            }
+        }
+
+        @include desktop-only {
+            padding: 40px 0 10px;
+            flex-direction: row-reverse;
+            justify-content: end;
+            align-items: center;
+            
+            & img {
+                margin-right: 5vw;
+            }
+
+            .navbar {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                width: 55%;
+            }
+
+            & .navbar_list, .navbar_list-lighter {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                column-gap: 40px;
+            }        
+        }
+    }
+}
+}
