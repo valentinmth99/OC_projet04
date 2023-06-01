@@ -1,0 +1,22 @@
+@import "../utils/variables";
+
+button {
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  border: 0;
+  border-radius: 25px;
+  color: white;
+  font: $normal-font 16px $primary-font;
+  padding: 13px 19px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  margin-top: 15px;
+}
+
+button:hover {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0.15)
+    ),
+    linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+}

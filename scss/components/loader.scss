@@ -1,0 +1,15 @@
+@import '../utils/animations';
+
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -47.5px;
+    margin-left: -47.5px;
+    animation: 1s linear infinite loader-spin;
+
+    & img {
+    opacity: 0;
+    animation: 2.5s ease-in loader-opacity;
+    }
+}

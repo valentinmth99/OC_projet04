@@ -1,0 +1,187 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.exploration {
+  text-align: center;
+  padding: 1vh 10vw 5vh;
+  background: #f7f7f7;
+
+  & p {
+    font: $light-font 18px $primary-font;
+  }
+}
+
+.explanation {
+  display: flex;
+  flex-direction: column;
+  padding: 2vh 4vw 5vh;
+
+  & h1 {
+    margin-bottom: 40px;
+  }
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3vh;
+  }
+
+  &_bar {
+    display: flex;
+    align-items: center;
+    column-gap: 17px;
+    background: #f7f7f7;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    width: 250px;
+    padding: 1vh 3vw 1vh 0;
+
+    & p,
+    span {
+      font: $normal-font 16px $primary-font;
+    }
+
+    & span {
+      color: white;
+      background: #9356dc;
+      border-radius: 50%;
+      padding: 5px 10px;
+      position: relative;
+      right: 15px;
+      font-size: 15px;
+    }
+
+    & i {
+      margin-left: -10px;
+    }
+  }
+
+  &_bar:hover {
+    i {
+      color: #9356dc;
+    }
+  }
+
+  @include desktop-only {
+    padding: 2vh 14vw 5vh;
+
+    &_container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+  padding: 2vh 4vw 5vh;
+  background: #f7f7f7;
+  width: auto;
+
+  .card {
+    width: 340px;
+    height: 251px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    position: relative;
+    align-self: center;
+
+    &_badge {
+      position: absolute;
+      right: 15px;
+      top: 0;
+      background: #99e2d0;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 2px;
+      font: $normal-font 14px $primary-font;
+      color: #008766;
+      padding: 7px 9px;
+    }
+    &_text h2 {
+      font: $bold-font 18px $primary-font;
+      margin-bottom: -12px;
+    }
+
+    &_text p {
+      font: $light-font 17px $primary-font;
+    }
+
+    & > img {
+      width: 100%;
+      object-fit: cover;
+      height: 69%;
+      border-radius: 15px 15px 0 0;
+    }
+
+    &_content {
+      height: 31%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+
+      .card_like {
+        position: relative;
+        right: 25px;
+        .card_unliked,
+        .card_liked {
+          position: absolute;
+          transition: opacity 1s ease-in-out;
+        }
+        .card_liked {
+          opacity: 0;
+          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+          transition: clip-path 1s ease-in-out, opacity 1s ease-in-out;
+        }
+      }
+
+      .card_like:hover .card_unliked {
+        opacity: 0;
+      }
+
+      .card_like:hover .card_liked {
+        opacity: 1;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+  }
+
+  @include desktop-only {
+    padding: 2vh 210px 5vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    gap: 50px 100px;
+    grid-template-areas:
+      "h1 ."
+      "card1 card2"
+      "card3 card4";
+    justify-items: center;
+
+    .card {
+      width: 100%;
+    }
+
+    & h1 {
+      grid-area: h1;
+      justify-self: left;
+      margin-bottom: -10px;
+    }
+    #card_1 {
+      grid-area: card1;
+    }
+    #card_2 {
+      grid-area: card2;
+    }
+    #card_3 {
+      grid-area: card3;
+    }
+    #card_4 {
+      grid-area: card4;
+    }
+  }
+}

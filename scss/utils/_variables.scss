@@ -1,4 +1,10 @@
 $breakpoints: (
-    tablette: 768px,
-    desktop: 1024px
-)
+  tablette: 768px,
+  desktop: 1024px,
+);
+
+$primary-font: "Roboto";
+$title-font: "Shrikhand";
+$bold-font: 700;
+$normal-font: 500;
+$light-font: 300;
