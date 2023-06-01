@@ -4,6 +4,11 @@ body {
   margin: 0;
 }
 
+a, a:hover, a:focus, ::after {
+  text-decoration: none;
+  color: inherit;
+}
+
 h1 {
   font: 700 24px "Roboto";
 }
@@ -277,6 +282,10 @@ button:hover {
   color: #353535;
 }
 
+.body_loading {
+  animation: 3s page-loading;
+}
+
 .exploration {
   text-align: center;
   padding: 1vh 10vw 5vh;
@@ -529,6 +538,12 @@ button:hover {
 .body_container header {
   max-width: 100%;
   z-index: 0;
+  position: relative;
+}
+.body_container header .header_arrow {
+  position: absolute;
+  left: 23px;
+  top: 24px;
 }
 .body_container header .header_logo {
   display: flex;
@@ -551,6 +566,43 @@ button:hover {
 }
 .body_container main {
   z-index: 1;
+}
+.body_container main button {
+  width: auto;
+  align-self: center;
+  margin-bottom: 30px;
+}
+.body_container main .menu_header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.body_container main .card_like {
+  position: relative;
+  right: 40px;
+  top: -13px;
+}
+.body_container main .card_like .card_unliked,
+.body_container main .card_like .card_liked {
+  position: absolute;
+  transition: opacity 1s ease-in-out;
+}
+.body_container main .card_like .card_liked {
+  opacity: 0;
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  transition: opacity 1s ease-in-out, -webkit-clip-path 1s ease-in-out;
+  transition: clip-path 1s ease-in-out, opacity 1s ease-in-out;
+  transition: clip-path 1s ease-in-out, opacity 1s ease-in-out, -webkit-clip-path 1s ease-in-out;
+}
+.body_container main .card_like:hover .card_unliked {
+  opacity: 0;
+}
+.body_container main .card_like:hover .card_liked {
+  opacity: 1;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .body_container main .menu_restaurant {
   display: flex;
@@ -621,6 +673,7 @@ button:hover {
   padding: 3px 4.4px;
   transition: transform 0.6s ease-out;
   transition-delay: 0.1s;
+  color: #99e2d0;
 }
 .body_container main .menu_restaurant .menu_section:nth-of-type(1) {
   animation: menu-apparition1 1.5s ease-out;
@@ -643,10 +696,4 @@ button:hover {
 .body_container main .menu_restaurant .menu_item:hover .menu_icon i,
 .body_container main .menu_restaurant .menu_item:active .menu_icon i {
   transform: rotate(360deg);
-}
-
-header,
-main,
-footer {
-  animation: 3s page-loading;
 }

@@ -1,6 +1,10 @@
 @import "../utils/variables";
 @import "../utils/mixins";
 
+.body_loading {
+  animation: 3s page-loading;
+}
+
 .exploration {
   text-align: center;
   padding: 1vh 10vw 5vh;
