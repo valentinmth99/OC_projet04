@@ -717,7 +717,6 @@ button:hover {
   transition: clip-path 0.5s ease-in-out, -webkit-clip-path 0.5s ease-in-out;
   position: absolute;
   right: 0;
-  pointer-events: none;
 }
 .body_container main .menu_restaurant .menu_item .menu_icon i {
   background-color: white;
