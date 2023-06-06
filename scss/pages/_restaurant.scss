@@ -127,10 +127,8 @@
 
         .menu_text {
           width: 100%;
-          
-    text-overflow: ellipsis;
-    overflow: hidden;
         }
+
         & span {
           transition: transform 0.5s ease-in-out;
         }
@@ -156,6 +154,8 @@
             transition-delay: 0.1s;
             color: #99e2d0;
           }
+
+          pointer-events: none;
         }
       }
 
@@ -173,8 +173,13 @@
       .menu_item:active {
 
         .menu_text {
-          width: calc(100% - 60px);
+          max-width: calc(100% - 100px);
           white-space: nowrap;
+
+          & h3, p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
         }
         & span {
           transform: translateX(-60px);
