@@ -1,11 +1,6 @@
 @import "../utils/variables";
 @import "../utils/mixins";
 
-
-// overflow grande div englobe span 
-// github pages
-// 4 pages restau 
-
 .body_loading {
   animation: 3s page-loading;
 }
@@ -44,7 +39,7 @@
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
     width: 250px;
-    padding: 1vh 1vw 1vh 0;
+    padding: 1vh 3vw 1vh 0;
 
     & p,
     span {
@@ -104,6 +99,11 @@
       flex-direction: row;
       justify-content: space-between;
       column-gap: 30px;
+    }
+
+    &_bar {
+      padding: 1vh 0vw;
+      width: 275px;
     }
   }
 }
@@ -184,6 +184,11 @@
       }
     }
   }
+
+  .card:hover {
+    cursor: pointer;
+  }
+  
   @include tablet-only {
     .card {
       width: 100%;

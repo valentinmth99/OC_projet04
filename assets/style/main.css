@@ -332,7 +332,7 @@ button:hover {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   width: 250px;
-  padding: 1vh 1vw 1vh 0;
+  padding: 1vh 3vw 1vh 0;
 }
 .explanation_bar p,
 .explanation_bar span {
@@ -382,6 +382,10 @@ button:hover {
     justify-content: space-between;
     -moz-column-gap: 30px;
          column-gap: 30px;
+  }
+  .explanation_bar {
+    padding: 1vh 0vw;
+    width: 275px;
   }
 }
 
@@ -458,6 +462,9 @@ button:hover {
   opacity: 1;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.restaurants .card:hover {
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .restaurants .card {
