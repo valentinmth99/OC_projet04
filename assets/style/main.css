@@ -226,7 +226,7 @@ button:hover {
 .footer .navbar_list i {
   padding-right: 15px;
 }
-@media screen and (min-width: 768px) and (max-width: ) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .footer img {
     align-self: left;
   }
@@ -252,7 +252,9 @@ button:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 55%;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+    margin-right: 40px;
   }
   .footer .navbar_list, .footer .navbar_list-lighter {
     display: flex;
@@ -330,7 +332,7 @@ button:hover {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   width: 250px;
-  padding: 1vh 3vw 1vh 0;
+  padding: 1vh 1vw 1vh 0;
 }
 .explanation_bar p,
 .explanation_bar span {
@@ -351,7 +353,7 @@ button:hover {
 .explanation_bar:hover i {
   color: #9356dc;
 }
-@media screen and (min-width: 768px) and (max-width: ) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .explanation .explanation_container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -373,11 +375,13 @@ button:hover {
 }
 @media screen and (min-width: 1024px) {
   .explanation {
-    padding: 2vh 14vw 5vh;
+    padding: 2vh 10vw 5vh;
   }
   .explanation_container {
     flex-direction: row;
     justify-content: space-between;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
   }
 }
 
@@ -455,14 +459,14 @@ button:hover {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
-@media screen and (min-width: 768px) and (max-width: ) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .restaurants .card {
     width: 100%;
   }
 }
 @media screen and (min-width: 1024px) {
   .restaurants {
-    padding: 2vh 210px 5vh;
+    padding: 2vh 10vw 5vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr 1fr;

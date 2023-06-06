@@ -44,7 +44,7 @@
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
     width: 250px;
-    padding: 1vh 3vw 1vh 0;
+    padding: 1vh 1vw 1vh 0;
 
     & p,
     span {
@@ -98,11 +98,12 @@
   }
   
   @include desktop-only {
-    padding: 2vh 14vw 5vh;
+    padding: 2vh 10vw 5vh;
 
     &_container {
       flex-direction: row;
       justify-content: space-between;
+      column-gap: 30px;
     }
   }
 }
@@ -189,7 +190,7 @@
     }
   }
   @include desktop-only {
-    padding: 2vh 210px 5vh;
+    padding: 2vh 10vw 5vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr 1fr;

@@ -87,9 +87,6 @@
       margin-top: -6vh;
       padding: 0 3vw;
 
-      @include tablet-only {
-        
-      }
       @include desktop-only {
         margin: -6vh 190px 0 190px;
       }
