@@ -1,6 +1,11 @@
 @import "../utils/variables";
 @import "../utils/mixins";
 
+
+// overflow grande div englobe span 
+// github pages
+// 4 pages restau 
+
 .body_loading {
   animation: 3s page-loading;
 }
@@ -67,6 +72,31 @@
     }
   }
 
+  @include tablet-only {
+    .explanation_container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 50px 50px;
+    grid-template-areas:
+      "bar1 bar2"
+      "bar3 bar3";
+      justify-items: center;
+    }
+
+    #bar1 {
+      grid-area: bar1;
+    }
+
+    #bar2 {
+      grid-area: bar2;
+    }
+    #bar3 {
+      grid-area: bar3;
+      align-self: center;
+    }
+  }
+  
   @include desktop-only {
     padding: 2vh 14vw 5vh;
 
@@ -153,7 +183,11 @@
       }
     }
   }
-
+  @include tablet-only {
+    .card {
+      width: 100%;
+    }
+  }
   @include desktop-only {
     padding: 2vh 210px 5vh;
     display: grid;

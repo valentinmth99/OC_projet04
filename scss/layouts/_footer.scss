@@ -28,6 +28,20 @@
         }
     }
 
+    @include tablet-only{
+        img {
+            align-self: left;
+        }
+
+        .navbar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            padding-top: 10px;
+        }
+    }
+
     @include desktop-only {
         padding: 40px 0 10px;
         flex-direction: row-reverse;

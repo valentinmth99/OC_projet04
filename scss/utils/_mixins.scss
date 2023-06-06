@@ -1,7 +1,7 @@
 @import "./variables";
 
 @mixin tablet-only {
-  @media screen and (min-width: map-get($breakpoints, tablette)) {
+  @media screen and (min-width: map-get($breakpoints, tablettemin)) and (max-width: map-get($breakpoints, tablettemax)) {
     @content;
   }
 }

@@ -226,6 +226,18 @@ button:hover {
 .footer .navbar_list i {
   padding-right: 15px;
 }
+@media screen and (min-width: 768px) and (max-width: ) {
+  .footer img {
+    align-self: left;
+  }
+  .footer .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 10px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .footer {
     padding: 40px 0 10px;
@@ -339,6 +351,26 @@ button:hover {
 .explanation_bar:hover i {
   color: #9356dc;
 }
+@media screen and (min-width: 768px) and (max-width: ) {
+  .explanation .explanation_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 50px 50px;
+    grid-template-areas: "bar1 bar2" "bar3 bar3";
+    justify-items: center;
+  }
+  .explanation #bar1 {
+    grid-area: bar1;
+  }
+  .explanation #bar2 {
+    grid-area: bar2;
+  }
+  .explanation #bar3 {
+    grid-area: bar3;
+    align-self: center;
+  }
+}
 @media screen and (min-width: 1024px) {
   .explanation {
     padding: 2vh 14vw 5vh;
@@ -422,6 +454,11 @@ button:hover {
   opacity: 1;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+@media screen and (min-width: 768px) and (max-width: ) {
+  .restaurants .card {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 1024px) {
   .restaurants {
@@ -637,8 +674,8 @@ button:hover {
 .body_container main .menu_restaurant .menu_item {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: last baseline;
+  justify-content: space-between;
   background: white;
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
   border-radius: 15.0431px;
@@ -647,6 +684,11 @@ button:hover {
   height: 90px;
   position: relative;
   animation: menu-apparition 2s ease-out;
+}
+.body_container main .menu_restaurant .menu_item .menu_text {
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .body_container main .menu_restaurant .menu_item span {
   transition: transform 0.5s ease-in-out;
@@ -683,6 +725,11 @@ button:hover {
 }
 .body_container main .menu_restaurant .menu_section:nth-of-type(3) {
   animation: menu-apparition3 4.5s ease-out;
+}
+.body_container main .menu_restaurant .menu_item:hover .menu_text,
+.body_container main .menu_restaurant .menu_item:active .menu_text {
+  width: calc(100% - 60px);
+  white-space: nowrap;
 }
 .body_container main .menu_restaurant .menu_item:hover span,
 .body_container main .menu_restaurant .menu_item:active span {

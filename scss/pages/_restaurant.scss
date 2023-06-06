@@ -87,6 +87,9 @@
       margin-top: -6vh;
       padding: 0 3vw;
 
+      @include tablet-only {
+        
+      }
       @include desktop-only {
         margin: -6vh 190px 0 190px;
       }
@@ -114,8 +117,8 @@
       .menu_item {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         align-items: last baseline;
+        justify-content: space-between;
         background: white;
         box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
         border-radius: 15.0431px;
@@ -124,6 +127,13 @@
         height: 90px;
         position: relative;
         animation: menu-apparition 2s ease-out;
+
+        .menu_text {
+          width: 100%;
+          
+    text-overflow: ellipsis;
+    overflow: hidden;
+        }
         & span {
           transition: transform 0.5s ease-in-out;
         }
@@ -164,6 +174,11 @@
 
       .menu_item:hover,
       .menu_item:active {
+
+        .menu_text {
+          width: calc(100% - 60px);
+          white-space: nowrap;
+        }
         & span {
           transform: translateX(-60px);
         }
